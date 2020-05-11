@@ -1,0 +1,78 @@
+May 11th, 2020
+
+* Understand the Problem
+    - Can you restate the problem in your own words?
+    - What are the inputs, what are the outputs?
+    - Can the outputs be determined from the inputs? 
+    - How should I label the important peices of data that are a part of the problem?
+
+    * example - Write a function that akes two numbers and returns their sum?
+
+        - Can you restate the problem in your own words?
+            'Addition!'
+        - What are the inputs, what are the outputs?
+            'inputs: 2 numbers'
+            'output: 1 number(sum)'
+        - Can the outputs be determined from the inputs? 
+            'yes'
+        - How should I label the important peices of data that are a part of the problem?
+            'function add, sum, numOne, numTwo'
+
+* Explore Examples
+    - Start with simple Examples
+    - Progress to more complex Examples
+    - Explore examples with empty or invalid inputs.
+
+
+    * example - Write a function which takes in a string and returns counts of each character in the string.
+
+        - charCount('aaaa') => {a: 4}
+        - charCount('hello') => {h: 1, e: 1, l: 2, o: 1}
+        - charCount('') => {} or undefined???
+        - charCount(null) => ???
+
+* Break it Down
+    - Explicitly write out the steps you need to take
+
+    * example - Write a function which takes in a string and returns counts of each character in the string.
+
+    `function charCount(string) {
+        // make obj to return at end
+        // loop over string
+            // if the char is a key in obj, add 1 to count
+                // else add it to obj and set val to 1
+            // if the char is (space, period, etc.) don't do anything
+        // return object at the end
+    }`
+
+* Solve/Simplify
+    - Find the core difficulty in what you are trying to do
+    - Temporarily ignore that difficulty
+    - Write a simplified solution
+    - Then incorporate that difficulty back in
+
+    * example - Write a function which takes in a string and returns counts of each character in the string.
+
+    function charCount(string) {
+        let result = {};
+
+        for (let i = 0; i < string.length; i++) {
+            let char = string[i].toLowerCase()
+            if(!result[char]) {
+                result[char] = 1
+            } else {
+                result[char]++
+            }
+        }
+        return result
+    }
+
+
+* Look Back and Refactor
+    - Can you check your result?
+    - Can you derive the result differently?
+    - Can you understand it at a glance?
+    - Can you use the resut or methos for some other problem?
+    - Can you improve the performance of your solution?
+    - Can you think of other ways to refactor?
+    - How have other people solved this problem?
