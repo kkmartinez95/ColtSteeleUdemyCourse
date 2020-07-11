@@ -61,6 +61,26 @@ class HashTable {
     }
     return values;
   }
+
+  remove(key) {
+    let position = this._hash(key);
+
+    if (!this.keyMap[position]) {
+      return undefined;
+    } else {
+      let thing = this.keyMap[position].filter((element) => {
+        if (element[0] !== key) {
+          return element;
+        }
+      });
+      // .filter((element) => {
+      //   if (element[0] !== key) {
+      //     return element;
+      //   }
+      // });
+      console.log('removed', thing);
+    }
+  }
 }
 
 let ht = new HashTable(17);
@@ -74,5 +94,6 @@ ht.set('plum', '#DDA0DD');
 // console.log('PLUM ==>', ht.get('plum'));
 console.log('KEYS => ', ht.keys());
 console.log('VALUES => ', ht.values());
+ht.remove('olive');
 
 // console.log(ht.keyMap);

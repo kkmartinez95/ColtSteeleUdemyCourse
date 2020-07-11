@@ -6,6 +6,8 @@ class Node {
   }
 }
 
+// HI KAITLYN
+
 class BinarySearchTree {
   constructor() {
     this.root = null;
